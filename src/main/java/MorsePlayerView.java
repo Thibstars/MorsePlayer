@@ -9,12 +9,12 @@ import java.awt.*;
  * @author Thibault Helsmoortel
  */
 @Log4j2
-public class MorsePlayerView extends JFrame {
+class MorsePlayerView extends JFrame {
 
     private MorseField morseField;
     private JButton btnPlay;
 
-    public MorsePlayerView() throws HeadlessException {
+    MorsePlayerView() throws HeadlessException {
         super("MorsePlayer");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         Dimension dimension = new Dimension(250, 150);
@@ -42,6 +42,7 @@ public class MorsePlayerView extends JFrame {
 
     private void initLayout() {
         morseField = new MorseField();
+        morseField.setFont(new Font("sans-serif", Font.PLAIN, 18));
         btnPlay = new JButton("Play!");
 
         add(morseField, BorderLayout.CENTER);
