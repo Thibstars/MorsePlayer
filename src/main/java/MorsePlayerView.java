@@ -17,7 +17,7 @@ class MorsePlayerView extends JFrame {
     MorsePlayerView() throws HeadlessException {
         super("MorsePlayer");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        Dimension dimension = new Dimension(250, 150);
+        Dimension dimension = new Dimension(320, 150);
         setSize(dimension);
         setPreferredSize(dimension);
         setMinimumSize(dimension);
@@ -44,6 +44,7 @@ class MorsePlayerView extends JFrame {
         morseField = new MorseField();
         morseField.setFont(new Font("sans-serif", Font.PLAIN, 18));
         btnPlay = new JButton("Play!");
+        btnPlay.setToolTipText("Click to play the corresponding Morse audio.");
 
         add(morseField, BorderLayout.CENTER);
         add(btnPlay, BorderLayout.PAGE_END);
